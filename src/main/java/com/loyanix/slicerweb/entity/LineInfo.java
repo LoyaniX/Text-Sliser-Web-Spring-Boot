@@ -94,4 +94,19 @@ public class LineInfo {
     public void setFileInfo(FileInfo fileInfo) {
         this.fileInfo = fileInfo;
     }
+
+    @Override
+    public String toString() {
+        return "LineInfo{" +
+                "id=" + id +
+                ", longestWord='" + longestWord + '\'' +
+                ", lengthLongWord=" + lengthLongWord +
+                ", shortestWord='" + shortestWord + '\'' +
+                ", lengthShortWord=" + lengthShortWord +
+                ", avgLengthWord=" + avgLengthWord +
+                ", lengthLine=" + lengthLine +
+                ", fileInfo=" + fileInfo +
+                '}';
+    }
+
 }
