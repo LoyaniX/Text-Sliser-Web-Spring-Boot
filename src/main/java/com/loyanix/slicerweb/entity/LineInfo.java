@@ -3,19 +3,27 @@ package com.loyanix.slicerweb.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "INFO_ABOUT_LINES")
 public class LineInfo {
 
     @Id
     @GeneratedValue
+    @Column(name = "ID_LINE")
     private int id;
+    @Column(name = "LONGEST_WORD_IN_LINE")
     private String longestWord;
+    @Column(name = "LENGTH_WORD_LONG")
     private int lengthLongWord;
+    @Column(name = "SHORTEST_WORD_IN_LINE")
     private String shortestWord;
+    @Column(name = "LENGTH_WORD_SHORT")
     private int lengthShortWord;
+    @Column(name = "AVG_WORD_LENGTH_IN_LINE")
     private int avgLengthWord;
+    @Column(name = "LINE_LENGTH")
     private int lengthLine;
     @ManyToOne
-    @JoinColumn(name = "fileId", referencedColumnName = "id")
+    @JoinColumn(name = "ID_FILE")
     private FileInfo fileInfo;
 
     public LineInfo() {
