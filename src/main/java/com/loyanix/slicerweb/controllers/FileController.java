@@ -21,12 +21,6 @@ public class FileController {
 
     @GetMapping("/")
     public String list(Model model){
-        List<FileInfo> fileInfos = fileService.findAll();
-        model.addAttribute("filesInfo", fileInfos);
         return "index";
     }
-
-
-
-
 }
