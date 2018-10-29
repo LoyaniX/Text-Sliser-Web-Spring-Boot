@@ -27,7 +27,7 @@ public class FileInfo {
     @Column(name = "AVG_LINE_LENGTH_IN_FILE")
     private int avgLengthLine;
 
-    @OneToMany
+    @OneToMany(mappedBy = "fileInfo")
     private List<LineInfo> lineInfos = new ArrayList();
 
     public FileInfo() {

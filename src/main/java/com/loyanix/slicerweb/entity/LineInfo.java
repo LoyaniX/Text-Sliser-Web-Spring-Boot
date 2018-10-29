@@ -22,7 +22,7 @@ public class LineInfo {
     private int avgLengthWord;
     @Column(name = "LINE_LENGTH")
     private int lengthLine;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ID_FILE")
     private FileInfo fileInfo;
 

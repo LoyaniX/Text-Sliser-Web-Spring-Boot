@@ -28,7 +28,7 @@ var FileInfoTable = React.createClass({
                 <FileInfo fileInfo={fileInfo} key={fileInfo.name} />);
         });
         return (
-            <table className="table table-striped">
+            <table className="table table-striped table-hover">
                 <thead>
                 <tr>
                     <th>Name</th>
