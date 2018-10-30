@@ -7,6 +7,7 @@ var FileInfo = React.createClass({
         if (this.state.display===false) return null;
         else return (
             <tr>
+                <td>{this.props.fileInfo.id}</td>
                 <td>{this.props.fileInfo.fileName}</td>
                 <td>{this.props.fileInfo.longestWord}</td>
                 <td>{this.props.fileInfo.lengthOfLongestWord}</td>
@@ -31,6 +32,7 @@ var FileInfoTable = React.createClass({
             <table className="table table-striped table-hover">
                 <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Name</th>
                     <th>Longest Word</th>
                     <th>Lenth</th>

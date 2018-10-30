@@ -8,8 +8,9 @@ import java.util.List;
 @Table(name = "INFO_ABOUT_FILES")
 public class FileInfo {
 
+
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_FILE")
     private int id;
     @Column(name = "NAME_OF_FILE")
@@ -33,7 +34,8 @@ public class FileInfo {
     public FileInfo() {
     }
 
-    public FileInfo(String fileName, String longestWord, int lengthOfLongestWord, String shortestWord, int lengthOfShortestWord, int avgLengthWord, int avgLengthLine, List<LineInfo> lineInfos) {
+    public FileInfo(int id, String fileName, String longestWord, int lengthOfLongestWord, String shortestWord, int lengthOfShortestWord, int avgLengthWord, int avgLengthLine, List<LineInfo> lineInfos) {
+        this.id = id;
         this.fileName = fileName;
         this.longestWord = longestWord;
         this.lengthOfLongestWord = lengthOfLongestWord;

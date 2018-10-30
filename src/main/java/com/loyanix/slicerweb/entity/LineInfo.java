@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class LineInfo {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID_LINE")
     private int id;
     @Column(name = "LONGEST_WORD_IN_LINE")
